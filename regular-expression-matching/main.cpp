@@ -54,6 +54,7 @@ bool regex_match(string pattern, string test) {
                 }
             }
 
+#if DEBUG == 1
             for (auto &rs:cached_bt) {
                 printf("\n");
                 for (auto &cs:rs) {
@@ -62,6 +63,7 @@ bool regex_match(string pattern, string test) {
                 printf("\n");
             }
             printf("\n");
+#endif
         }
     }
     return cached_bt[t][p] == 1;
